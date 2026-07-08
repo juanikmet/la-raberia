@@ -1,16 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import LogoCover from './components/LogoCover/LogoCover'
+import TvDisplay from './components/TvDisplay/TvDisplay'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <LogoCover greeting={'Muy pronto'}/>
-    </>
+    <Routes>
+      <Route path="/" element={<LogoCover greeting={'Muy pronto'} />} />
+      <Route
+        path="/tv/izquierda"
+        element={<TvDisplay image="/menu/tv-izquierda.jpg" alt="Menú TV izquierda" />}
+      />
+      <Route
+        path="/tv/derecha"
+        element={<TvDisplay image="/menu/tv-derecha.jpg" alt="Menú TV derecha" />}
+      />
+    </Routes>
   )
 }
 
