@@ -92,3 +92,15 @@
   outline: 3px solid #0063a2;
   outline-offset: 3px;
 }
+
+@media (max-width: 480px) {
+  .link-in-bio__logo {
+    width: 33vw;
+    max-width: 308px;
+    min-width: 154px;
+  }
+
+  .link-in-bio__strip {
+    height: 10vh;
+  }
+}

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { MenuIcon, PinIcon, DeliveryIcon, InstagramIcon } from './icons'
+import { MenuIcon, PinIcon, DeliveryIcon, InstagramIcon, TikTokIcon } from './icons'
 import './LinkInBio.css'
 
 const LinkInBio = () => {
@@ -40,6 +40,15 @@ const LinkInBio = () => {
           >
             <InstagramIcon />
             <span>Instagram</span>
+          </a>
+          <a
+            href="https://www.tiktok.com/@la.raberia"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-in-bio__button"
+          >
+            <TikTokIcon />
+            <span>TikTok</span>
           </a>
         </nav>
       </div>

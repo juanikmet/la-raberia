@@ -41,3 +41,15 @@ export const InstagramIcon = () => (
     <circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none" />
   </svg>
 )
+
+export const TikTokIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path
+      d="M9 12a4 4 0 1 0 4 4V3.5c.5 2.7 2.7 4.8 5.5 5.1V12c-2 0-3.9-.7-5.5-1.9"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+)
