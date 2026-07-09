@@ -94,8 +94,12 @@
 }
 
 @media (max-width: 480px) {
+  .link-in-bio__content {
+    flex: 0 0 auto;
+  }
+
   .link-in-bio__header {
-    margin-top: 12px;
+    margin-top: 24px;
   }
 
   .link-in-bio__logo {
@@ -105,10 +109,11 @@
   }
 
   .link-in-bio__buttons {
-    margin-bottom: 24px;
+    margin-bottom: 12px;
   }
 
   .link-in-bio__strip {
     height: 5vh;
+    margin-top: auto;
   }
 }
