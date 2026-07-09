@@ -94,6 +94,10 @@
 }
 
 @media (max-width: 480px) {
+  .link-in-bio__header {
+    margin-top: 24px;
+  }
+
   .link-in-bio__logo {
     width: 33vw;
     max-width: 308px;
