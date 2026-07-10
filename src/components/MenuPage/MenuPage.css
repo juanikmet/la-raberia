@@ -1,0 +1,160 @@
+.menu-page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  background-color: #f2e9cf;
+  color: #0063a2;
+  font-family: 'Archivo', sans-serif;
+  box-sizing: border-box;
+  padding: 40px 24px 64px;
+}
+
+.menu-page__title {
+  max-width: 640px;
+  margin: 0 auto 32px;
+  color: #0063a2;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 6vw, 2.75rem);
+  text-align: center;
+}
+
+.menu-page__status {
+  max-width: 640px;
+  margin: 0 auto;
+  color: #0063a2;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 500;
+  text-align: center;
+}
+
+.menu-page__accordion {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-category {
+  border-bottom: 2px solid rgba(0, 99, 162, 0.2);
+}
+
+.menu-category__heading {
+  margin: 0;
+}
+
+.menu-category__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 4px;
+  border: none;
+  background: transparent;
+  color: #0063a2;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.menu-category__header:focus-visible {
+  outline: 3px solid #0063a2;
+  outline-offset: 3px;
+}
+
+.menu-category__chevron {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  transition: transform 200ms ease;
+}
+
+.menu-category__chevron--open {
+  transform: rotate(180deg);
+}
+
+.menu-category__panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 280ms ease;
+}
+
+.menu-category__panel--open {
+  grid-template-rows: 1fr;
+}
+
+.menu-category__panel-inner {
+  overflow: hidden;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-category__panel-inner > .menu-item:last-child {
+  padding-bottom: 24px;
+}
+
+.menu-item {
+  padding: 12px 4px 20px;
+}
+
+.menu-item__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.menu-item__title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #0063a2;
+}
+
+.menu-item__price {
+  flex-shrink: 0;
+  font-weight: 600;
+  color: #0063a2;
+  white-space: nowrap;
+}
+
+.menu-item__description {
+  margin: 4px 0 0;
+  font-weight: 500;
+  color: #379df1;
+  font-size: 16px;
+}
+
+.menu-item__combo-prices {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu-item__combo-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 18px;
+  color: #0063a2;
+}
+
+.menu-item__combo-row span:first-child {
+  color: #0063a2;
+  font-weight: 500;
+}
+
+.menu-item__combo-row span:last-child {
+  flex-shrink: 0;
+  font-weight: 600;
+  color: #0063a2;
+  white-space: nowrap;
+}

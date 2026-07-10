@@ -1,14 +1,14 @@
 import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import LinkInBio from './components/LinkInBio/LinkInBio'
-import LogoCover from './components/LogoCover/LogoCover'
+import MenuPage from './components/MenuPage/MenuPage'
 import TvDisplay from './components/TvDisplay/TvDisplay'
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<LinkInBio />} />
-      <Route path="/menu" element={<LogoCover greeting={'Muy pronto'} />} />
+      <Route path="/menu" element={<MenuPage />} />
       <Route
         path="/tv/izquierda"
         element={<TvDisplay image="/menu/tv-izquierda.jpg" alt="Menú TV izquierda" />}
