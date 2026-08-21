@@ -1,15 +1,6 @@
 import { useEffect, useState } from 'react'
-import Papa from 'papaparse'
+import { fetchMenuRows, formatPrice } from '../../lib/menuData'
 import './MenuPage.css'
-
-const CSV_URL =
-  'https://docs.google.com/spreadsheets/d/e/2PACX-1vR3m-eh4PRxIpUeN791xFn2g3liwxwDcJxb_7fm2n97-0VaOn_89rUUa0wM_ko51snK3QqCfZTmbhCy/pub?gid=938545336&single=true&output=csv'
-
-const formatPrice = (value) => {
-  const number = Number(value)
-  if (Number.isNaN(number)) return value
-  return `$${number.toLocaleString('es-AR')}`
-}
 
 const groupByCategoria = (rows) => {
   const groups = new Map()
@@ -55,16 +46,12 @@ const MenuPage = () => {
   const [openCategories, setOpenCategories] = useState(new Set())
 
   useEffect(() => {
-    Papa.parse(CSV_URL, {
-      download: true,
-      header: true,
-      skipEmptyLines: true,
-      complete: (results) => {
-        setCategories(groupByCategoria(results.data))
+    fetchMenuRows()
+      .then((rows) => {
+        setCategories(groupByCategoria(rows))
         setStatus('ready')
-      },
-      error: () => setStatus('error'),
-    })
+      })
+      .catch(() => setStatus('error'))
   }, [])
 
   const toggleCategory = (categoria) => {
